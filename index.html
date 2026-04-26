@@ -12,8 +12,8 @@
   <title>Fylo landing page with dark theme and features grid | Frontend Mentor</title>
 </head>
 
-<body class="bg-primary text-white font-body text-center text-sm">
-  <header class="flex justify-between mb-12 py-6 px-5">
+<body class="text-white font-body text-center text-sm">
+  <header class="flex justify-between p-6 pb-12 bg-secondary">
     <a href="/" aria-label="Home" class="max-w-20">
       <img src=" ./assets/images/logo.svg" alt="Fylo Logo">
     </a>
@@ -26,8 +26,8 @@
     </nav>
   </header>
 
-  <main class="py-6 px-5">
-    <section aria-labelledby="hero-heading" class="pb-35">
+  <main class="bg-primary">
+    <section aria-labelledby="hero-heading" class="bg-[url('../assets/images/bg-curvy-mobile.svg')] bg-no-repeat bg-bottom bg-size-[150%_50%] pt-6 px-5 mb-35 bg-secondary">
       <img src="./assets//images/illustration-intro.png" alt="" aria-hidden="true" class="mb-18">
 
       <h1 id="hero-heading" class="text-xl font-bold font-display mb-6">All your files in one secure location, accessible anywhere.</h1>
@@ -38,7 +38,7 @@
       <a href="#signup" type="button" class="bg-cta py-4 rounded-3xl inline-block w-60 font-display font-bold">Get Started</a>
     </section>
 
-    <section id="features" aria-labelledby="features-heading" class="mb-40">
+    <section id="features" aria-labelledby="features-heading" class="mb-40 px-5 bg-primary">
       <!-- <h2 id="features-heading">Features</h2> -->
       <ul class="grid gap-20">
         <li>
@@ -64,7 +64,7 @@
       </ul>
     </section>
 
-    <section aria-labelledby="productive-heading" class="text-start mb-37.5">
+    <section aria-labelledby="productive-heading" class="text-start mb-37.5 px-5">
       <img src="assets/images/illustration-stay-productive.png" alt="" class="mb-12">
       <h2 id="productive-heading" class="font-bold text-base font-display mb-4">Stay productive, wherever you are</h2>
       <p class="mb-4">Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.</p>
@@ -73,7 +73,7 @@
       </a>
     </section>
 
-    <section class="mb-37.5">
+    <section class="mb-37.5 px-5">
       <ul class="grid gap-6 text-start">
         <li class="bg-card px-5 py-6 tracking-wider rounded-sm relative">
           <span class="max-w-8 absolute -top-6 left-2 -z-1"><img src="assets/images/bg-quotes.png" alt=""></span>
@@ -115,18 +115,20 @@
       </ul>
     </section>
 
-    <section id="signup" aria-labelledby="cta-heading" class="bg-secondary rounded-lg text-shadow-lg px-7 py-9">
-      <h2 id="cta-heading" class="text-xl font-display font-bold mb-4">Get early access today</h2>
-      <p class="mb-8">It only takes a minute to sign up and our free starter tier is extremely generous. If you have any
-        questions, our support team would be happy to help you</p>
-      <form action="" class="grid gap-6 justify-center">
-        <input type="email" placeholder="email@example.com" required id="email-signup" name="email" autocomplete="email" class="bg-white py-4 rounded-3xl inline-block w-60 font-display font-bold text-gray-400 text-center">
-        <button type="submit" class="bg-cta py-4 rounded-3xl inline-block w-60 font-display font-bold">Get Started For Free</button>
-      </form>
+    <section class="bg-[linear-gradient(var(--color-primary)_200px,var(--color-footer)_0px)] pb-21">
+      <div id="signup" aria-labelledby="cta-heading" class="bg-secondary rounded-lg text-shadow-lg px-7 py-9 mx-5">
+        <h2 id="cta-heading" class="text-xl font-display font-bold mb-4">Get early access today</h2>
+        <p class="mb-8">It only takes a minute to sign up and our free starter tier is extremely generous. If you have any
+          questions, our support team would be happy to help you</p>
+        <form action="" class="grid gap-6 justify-center">
+          <input type="email" placeholder="email@example.com" required id="email-signup" name="email" autocomplete="email" class="bg-white py-4 rounded-3xl inline-block w-60 font-display font-bold text-gray-400 text-center">
+          <button type="submit" class="bg-cta py-4 rounded-3xl inline-block w-60 font-display font-bold">Get Started For Free</button>
+        </form>
+      </div>
     </section>
   </main>
 
-  <footer class="bg-footer py-6 px-5 grid text-start">
+  <footer class="bg-footer px-5 grid text-start">
     <a href="/" aria-label="Home" class="max-w-20 mb-10">
       <img src=" ./assets/images/logo.svg" alt="Fylo Logo">
     </a>
