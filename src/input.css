@@ -1,1 +1,22 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: hsl(218, 28%, 13%);
+  --color-secondary: hsl(217, 28%, 15%);
+  --color-card: hsl(219, 30%, 18%);
+  --color-footer: hsl(216, 53%, 9%);
+
+  --color-accent-start: hsl(176, 68%, 64%);
+  --color-accent-end: hsl(198, 60%, 50%);
+
+  --color-error: hsl(0, 100%, 63%);
+
+  --background-image-cta: linear-gradient(
+    to right,
+    var(--color-accent-start),
+    var(--color-accent-end)
+  );
+
+  --font-body: 'Open Sans', sans-serif;
+  --font-display: 'Raleway', sans-serif;
+}
