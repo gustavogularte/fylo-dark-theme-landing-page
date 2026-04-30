@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="src/output.css">
   <title>Fylo landing page with dark theme and features grid | Frontend Mentor</title>
 </head>
@@ -18,7 +19,7 @@
       <img src=" ./assets/images/logo.svg" alt="Fylo Logo">
     </a>
     <nav aria-label="Primary Navigation">
-      <ul class="flex gap-6 text-xs font-display md:text-base md:gap-14">
+      <ul class="flex gap-6 text-xs font-display md:text-base md:gap-14 *:hover:font-bold">
         <li><a href="#features">Features</a></li>
         <li><a href="#team">Team</a></li>
         <li><a href="#sign-in">Sign In</a></li>
@@ -35,7 +36,7 @@
       <p class="mb-6 max-w-74 mx-auto md:max-w-160 md:mb-8">Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with friends family, and co-workers.
       </p>
 
-      <a href="#signup" type="button" class="bg-cta py-4 rounded-3xl inline-block w-60 font-display font-bold md:text-base md:w-70 md:py-4.5 md:rounded-3.5xl">Get Started</a>
+      <a href="#signup" type="button" class="bg-cta py-4 rounded-3xl inline-block w-60 font-display font-bold hover:opacity-70 transition-all md:text-base md:w-70 md:py-4.5 md:rounded-3.5xl">Get Started</a>
     </section>
 
     <section id="features" aria-labelledby="features-heading" class="mb-40 px-5 bg-primary md:mb-36.5">
@@ -64,22 +65,29 @@
       </ul>
     </section>
 
-    <section aria-labelledby="productive-heading" class="text-start mb-37.5 px-5 md:grid md:grid-cols-2 md:gap-14 md:px-20">
+    <section aria-labelledby="productive-heading" class="text-start mb-37.5 px-5 md:grid md:grid-cols-2 md:gap-14 md:px-20 container mx-auto">
       <img src="assets/images/illustration-stay-productive.png" alt="" class="mb-12">
       <div>
-        <h2 id="productive-heading" class="font-bold text-base font-display mb-4 md:text-[40px] md:mb-8">Stay productive, wherever you are</h2>
+        <h2 id="productive-heading" class="font-bold text-base font-display max-w-90 mb-4 md:text-[40px] md:mb-8">Stay productive, wherever you are</h2>
         <p class="mb-4">Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.</p>
         <p class="mb-4">Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
-        <a href="#" class="text-accent-start underline flex gap-2 items-center md:text-base">See how Fylo works <span><img src="assets/images/icon-arrow.svg" alt="" aria-hidden="true"></span>
+        <a href="#" class="group flex gap-2 items-center border-b border-accent-start pb-1 hover:border-white hover:text-white transition-all md:text-base text-accent-start w-fit">
+          See how Fylo works
+          <span class="group-hover:filter-[brightness(0)_invert(1)] transition-all">
+            <img src="assets/images/icon-arrow.svg" alt="" aria-hidden="true">
+          </span>
+        </a>
         </a>
       </div>
 
     </section>
 
     <section class="mb-37.5 px-5 md:px-20 md:mb-55">
-      <ul class="grid gap-6 text-start md:grid-cols-3 md:gap-10">
-        <li class="bg-card px-5 py-6 tracking-wider rounded-sm relative">
-          <span class="max-w-8 absolute -top-6 left-2 -z-1"><img src="assets/images/bg-quotes.png" alt=""></span>
+      <ul class="grid gap-6 text-start md:grid-cols-3 md:gap-10 max-w-295 mx-auto relative">
+        <span class="max-w-8 absolute -top-6 left-2 z-10">
+          <img src="assets/images/bg-quotes.png" alt="">
+        </span>
+        <li class="bg-card px-5 py-6 tracking-wider rounded-sm z-20">
           <blockquote>
             <p class="text-[10px] mb-4 leading-5 md:text-sm md:mb-6">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
             <footer class="grid grid-cols-[auto_1fr] gap-2">
@@ -123,9 +131,12 @@
         <h2 id="cta-heading" class="text-xl font-display font-bold mb-4 md:text-[40px]">Get early access today</h2>
         <p class="mb-8 md:text-sm">It only takes a minute to sign up and our free starter tier is extremely generous. If you have any
           questions, our support team would be happy to help you</p>
-        <form action="" class="grid gap-6 justify-center md:grid-cols-[1fr_auto]">
-          <input type="email" placeholder="email@example.com" required id="email-signup" name="email" autocomplete="email" class="bg-white py-4 px-8 rounded-3xl inline-block w-60 font-display font-bold text-gray-400 text-center md:w-full md:text-[12px] md:text-start">
-          <button type="submit" class="bg-cta py-4 rounded-3xl inline-block w-60 font-display font-bold md:text-sm">Get Started For Free</button>
+        <form class="grid gap-6 justify-center md:grid-cols-[1fr_auto]" id="signup-form">
+          <div class="grid">
+            <input type="email" placeholder="email@example.com" id="email-signup" name="email" autocomplete="email" class="bg-white py-4 px-8 rounded-3xl inline-block w-60 font-display font-bold text-gray-400 text-center md:w-full md:text-[12px] md:text-start">
+            <p id="email-error" class="text-error text-xs mt-2 ml-4 text-start hidden">Error, please check your email.</p>
+          </div>
+          <button type="submit" class="bg-cta py-4 rounded-3xl inline-block w-60 font-display font-bold hover:opacity-70 cursor-pointer md:text-sm">Get Started For Free</button>
         </form>
       </div>
     </section>
@@ -136,9 +147,9 @@
       <img src=" ./assets/images/logo.svg" alt="Fylo Logo">
     </a>
 
-    <div class="grid lg:grid-cols-4">
+    <div class="grid lg:grid-cols-[2fr_1fr_1fr_1fr_auto] lg:gap-20">
       <address>
-        <ul class="mb-14 grid gap-4 md:grid-cols-2">
+        <ul class="mb-14 grid gap-4">
           <li class="flex gap-4">
             <img src="./assets//images/icon-location.svg" alt="" aria-hidden="true" class="max-h-6 max-w-6">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
@@ -147,7 +158,7 @@
       </address>
 
       <address class="mb-14">
-        <ul>
+        <ul class="*:hover:font-bold cursor-pointer">
           <li class="flex gap-4 mb-4">
             <img src="./assets//images/icon-phone.svg" alt="" aria-hidden="true" class="max-h-6 max-w-6">
             <p>+1-543-123-4567</p>
@@ -161,7 +172,7 @@
 
       <nav aria-label="Links footer">
         <ul class="grid gap-4 mb-10">
-          <div class="grid gap-4">
+          <div class="grid gap-4 *:hover:font-bold cursor-pointer">
             <li><a href="#">About Us</a></li>
             <li><a href="#">Jobs</a></li>
             <li><a href="#">Press</a></li>
@@ -171,37 +182,67 @@
       </nav>
 
       <nav aria-label="Links footer">
-        <ul class="grid gap-4 mb-12">
+        <ul class="grid gap-4 mb-12 *:hover:font-bold cursor-pointer">
           <li><a href="#">Contact Us</a></li>
           <li><a href="#">Terms</a></li>
           <li><a href="#">Privacy</a></li>
         </ul>
       </nav>
 
+      <section aria-label="Social media">
+        <ul class="flex justify-center gap-4">
+          <li>
+            <a href="#" aria-label="Facebook" class="flex h-8 w-8 items-center justify-center rounded-full border border-white duration-75 ease-in md:h-10 md:w-10 md:text-xl hover:text-accent-start hover:border-accent-start focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-start">
+              <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+            </a>
+          </li>
 
-      <nav aria-label="Social medias">
-        <ul>
           <li>
-            <a href="#" aria-label="Facebook do Fylo">
-              <img src="./assets/images/icon-facebook.svg" alt="" aria-hidden="true">
+            <a href="#" aria-label="Twitter" class="flex h-8 w-8 items-center justify-center rounded-full border border-white duration-75 ease-in md:h-10 md:w-10 md:text-xl hover:text-accent-start hover:border-accent-start focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-start">
+              <i class="fa-brands fa-twitter" aria-hidden="true"></i>
             </a>
           </li>
+
           <li>
-            <a href="#" aria-label="Twitter do Fylo">
-              <img src="./assets/images/icon-twitter.svg" alt="" aria-hidden="true">
-            </a>
-          </li>
-          <li>
-            <a href="#" aria-label="Instagram do Fylo">
-              <img src="./assets/images/icon-instagram.svg" alt="" aria-hidden="true">
+            <a href="#" aria-label="Instagram" class="flex h-8 w-8 items-center justify-center rounded-full border border-white duration-75 ease-in md:h-10 md:w-10 md:text-xl hover:text-accent-start hover:border-accent-start focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-start">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
             </a>
           </li>
         </ul>
-      </nav>
+      </section>
     </div>
 
-    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.Coded by <a href="https://github.com/gustavogularte">Gustavo Arend</a></p>
+    <p class="text-center text-sm md:text-base py-4">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" class="font-bold hover:underline">Frontend Mentor</a>. Coded by <a href="https://github.com/gustavogularte" class="font-bold hover:underline">Gustavo Arend</a>
+    </p>
   </footer>
+
+  <script>
+    const form = document.getElementById('signup-form');
+    const input = document.getElementById('email-signup');
+    const error = document.getElementById('email-error');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const value = input.value;
+      const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+
+      if (!isValid) {
+        error.classList.remove('hidden');
+      } else {
+        error.classList.add('hidden');
+      }
+    });
+
+    input.addEventListener('input', () => {
+      const value = input.value;
+      const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+      if (isValid) {
+        error.classList.add('hidden');
+      }
+    });
+  </script>
 </body>
+
 
 </html>
