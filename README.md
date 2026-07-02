@@ -58,7 +58,7 @@ Durante o desenvolvimento, também exercitei conceitos importantes de estrutura�
 
 # 🔗 Links
 
-- 🚀 **Deploy:** https://SEU-LINK.netlify.app/
-- 🎨 **Desafio do Frontend Mentor:** https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-4gCANZW_
+- 🚀 **Deploy:** https://gustavogularte.github.io/fylo-dark-theme-landing-page/
+- 🎨 **Desafio do Frontend Mentor:** https://www.frontendmentor.io/solutions/fylo-dark-theme-landing-page-tailwind-G0kIOwzQBL
 - 👤 **Meu perfil no Frontend Mentor:** https://www.frontendmentor.io/profile/gustavogularte
 - 💼 **LinkedIn:** https://www.linkedin.com/in/gustavo-gularte-arend-58742a286/
